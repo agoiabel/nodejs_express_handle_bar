@@ -37,4 +37,7 @@ app.get('/make-up', function (req, res) {
 app.get('/skin-care', function (req, res) {
 	res.render('skin-care');
 });
-app.listen(3000);
+
+var port = process.env.PORT || 3000;
+
+app.listen(port);
