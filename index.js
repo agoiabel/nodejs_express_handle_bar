@@ -23,18 +23,18 @@ app.use(express.static('public'));
  * @return 
  */
 app.get('/', function (req, res) {
-	res.render('index', {
-		title: ' My blog',
-		entries: blogEngine.getBlogEntries()
-	});
+	res.render('index');
 });
-app.get('/about', function (req, res) {
-	res.render('about');
+app.get('/contact', function (req, res) {
+	res.render('contact');
 });
-app.get('/article/:id', function (req, res) {
-	res.render('article', {
-		article: blogEngine.getBlogEntry(req.params.id)
-	});
+app.get('/beauty-expert', function (req, res) {
+	res.render('beauty-expert');
 });
-
+app.get('/make-up', function (req, res) {
+	res.render('make-up');
+});
+app.get('/skin-care', function (req, res) {
+	res.render('skin-care');
+});
 app.listen(3000);
