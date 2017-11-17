@@ -1,0 +1,24 @@
+/** This will contain the site,s color variable and default styles */
+$white: 				#fff;
+$background-white: 		#f6f6f6;
+$primary-text-color: 	#4D4D4D;
+$deep-blue:				#222A34;
+$orange:				#FFCE00;
+$blue:					#4E87FF;
+$grey:					#F0F0F0;
+
+.wrapper {
+	width: 80%;
+	margin: 45px auto;
+}
+
+html {
+  box-sizing: 			border-box;
+  color:				$primary-text-color;
+  background-color: 	$background-white;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+

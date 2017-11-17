@@ -1,0 +1,206 @@
+.item-description {
+	padding: 			200px 10px 10px 25px;
+	background-color:	$white;
+}
+.item-title {
+	font-size: em(25);	
+	margin-bottom: 40px;
+}
+.short-description {
+	font-size: em(14);
+	margin-bottom: 20px;
+
+}
+.item-more-details {
+	margin-bottom: 20px !important;
+}
+.item-price {
+	font-size: em(18);
+}
+.item-rating .fa {
+	color: $orange;
+}
+.counter {
+	margin-bottom: 30px;
+}
+.counter-action {
+	border: 	1px solid $grey;
+	padding: 	12px;
+}
+.form-control {
+	max-width: 100%;
+}
+.btn {
+	color: 				$white;
+	background-color: 	$blue;
+	border: 			1px solid $blue;
+	padding:			10px 35px;
+}
+
+.buy-now {
+	margin-bottom: 100px;
+}
+
+.call-to-action {
+	padding: 10px;
+	border: 2px solid $grey;
+	border-radius: 50%;
+}
+.call-to-action-button-one {
+	color: $grey;
+}
+.call-to-action-two {
+	background-color: $orange;
+	border:	2px solid $orange;	
+}
+.call-to-action-button-two {
+	color:	$white;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.item-images {
+	position: relative;
+}
+.item-image {
+	display: none;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  left: 75%;
+
+  width: auto;
+
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+
+  border: 1px solid #ccc;
+  padding: 16px;
+  transition: 0.6s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+	margin-left: 12%;
+	border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+@media screen and (max-width: 750px) {
+	.wrapper {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.cart-item {
+		flex-direction: column;
+	}
+	.item-images,
+	.item-description,
+	.short-description,
+	.item-more-details {
+		width: 100%;
+	}
+	.item-title {
+		margin-top: 15px;
+	}
+	.btn-call-to-action {
+		display: flex;
+	}
+	.buy-now {
+		margin-bottom: 0;
+		margin-right: auto;
+	}
+	.item-description {
+		padding: 10px 10px 10px 10px;
+	}
+	.prev, .next {
+	  position: absolute;
+	  top: 85%;
+	  left: 75%;
+	}
+}
+@media screen and (max-width: 950px) and (min-width: 751px) {
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.cart-item {
+		flex-direction: column;
+	}
+	.item-images,
+	.item-description,
+	.short-description,
+	.item-more-details {
+		width: 100%;
+	}
+	.item-title {
+		margin-top: 15px;
+	}
+	.buy-now {
+		margin-bottom: 0;
+		margin-right: auto;
+	}
+	.btn-call-to-action {
+		display: flex;
+	}
+	.item-description {
+		padding: 10px 10px 10px 10px;
+	}
+	.next {
+		margin-left: 7%;
+	}
+}
+@media screen and (max-width: 1200px) and (min-width: 951px) {
+	.wrapper {
+		width: 80%;
+		margin: 70px auto;
+	}
+	.item-description {
+		padding: 55px 10px 10px 10px;
+	}
+	.btn-call-to-action {
+		display: flex;
+	}
+	.buy-now {
+		margin-bottom: 0;
+		margin-right: auto;
+	}
+	.prev, .next {
+	  position: absolute;
+	  top: 80%;
+	  left: 75%;
+	}
+}

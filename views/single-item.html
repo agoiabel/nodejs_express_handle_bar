@@ -1,0 +1,82 @@
+  <div class="wrapper">
+    <section class="cart-item flexContainer">
+      <div class="item-images width-50">  
+        <div class="item-image fade">
+          <img src="./images/placeholder-img.png" alt="">
+        </div>
+        <div class="item-image fade">
+          <img src="./images/placeholder-img.png" alt="">
+        </div>
+        <div class="item-image fade">
+          <img src="./images/placeholder-img.png" alt="">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="item-description width-50">
+        <h1 class="item-title">Kinfolk Book online shop</h1>
+        <p class="short-description width-70">
+          Kinfolk Book online stock is very popular almost crossed 50k sales. use offer code 'bookinfolk' to get 40% discounts. 
+          <span class="more"><a href="#">more</a></span>
+        </p>
+        
+        <div class="item-more-details width-40 flexContainer">
+          <div class="item-price m-r-10">$ 20.69</div>
+          <div class="item-rating">
+            <i class="fa fa-star" aria-hidden="true"></i> 
+            <i class="fa fa-star" aria-hidden="true"></i> 
+            <i class="fa fa-star" aria-hidden="true"></i> 
+            <i class="fa fa-star" aria-hidden="true"></i> 
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>  
+          </div>      
+        </div>
+        
+        <ul class="counter flexContainer">
+          <li class="counter-action substraction" onclick="substraction()" id="substraction"> - </li>
+          <li class="counter-action count" id="value"> 1 </li>
+          <li class="counter-action addition" onclick="addition()" id="addition"> + </li>
+        </ul>
+
+        <div class="btn-call-to-action">
+          <button class="btn buy-now" id="buy-now" onclick="displayModal()"><i class="fa fa-shopping-cart m-r-10" aria-hidden="true"></i> Buy Now</button>
+          <ul class="call-to-actions flexContainer flexEnd">
+            <li class="call-to-action call-to-action-one m-r-20"><i class="fa fa-share-alt call-to-action-button-one" aria-hidden="true"></i></li>
+            <li class="call-to-action call-to-action-two"><i class="fa fa-heart call-to-action-button-two" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="myModal" class="modal">
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Please we need more information about you to process the payment</h2>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="firstname" class="label-control">Firstname:</label>
+            <input type="text" name="firstname" placeholder="Your firstname" class="form-control" autofocus required="required">
+          </div>
+          <div class="form-group">
+            <label for="firstname" class="label-control">Lastname:</label>
+            <input type="text" name="lastname" placeholder="Your lastname" class="form-control" required="required">
+          </div>
+          <div class="form-group">
+            <label for="email" class="label-control">Email:</label>
+            <input type="email" name="email" placeholder="Your email" class="form-control" required="required">
+          </div>
+          <div class="form-group">
+            <label for="phonenumber" class="label-control">Phone number:</label>
+            <input type="number" name="phonenumber" placeholder="Your phonenumber" class="form-control" required="required">
+          </div>
+          <button type="submit" name="submit" class="btn">Continue</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>

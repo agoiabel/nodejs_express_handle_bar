@@ -1,0 +1,540 @@
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Spacer
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.spacer-5,
+.spacer-10,
+.spacer-20,
+.spacer-30,
+.spacer-40,
+.spacer-50,
+.spacer-60,
+.spacer-70,
+.spacer-80,
+.spacer-90,
+.spacer-100 {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.spacer-5 {
+    height: 5px;
+}
+.spacer-10 {
+    height: 10px;
+}
+.spacer-20 {
+    height: 20px;
+}
+.spacer-30 {
+    height: 30px;
+}
+.spacer-40 {
+    height: 40px;
+}
+.spacer-50 {
+    height: 50px;
+}
+.spacer-60 {
+    height: 60px;
+}
+.spacer-70 {
+    height: 70px;
+}
+.spacer-80 {
+    height: 80px;
+}
+.spacer-90 {
+    height: 90px;
+}
+.spacer-100 {
+    height: 100px;
+}
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Mixins
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after {
+	  content: "";
+	  display: table;
+	} 
+	&:after {
+	  clear: both;
+	}
+	& {
+	  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+	}
+}
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   FlexHelpers
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.flexContainer {
+	-webkit-display: flex;
+	display: flex;
+}
+.flexStart {
+	justify-content: flex-start;
+}
+.flexEnd {
+	justify-content: flex-end;
+}
+.flexCenter {
+	justify-content: center;
+}
+.flexColumnDirection {
+	flex-direction: column;
+}
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Padding Helpers
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.p-1 {
+	padding: em(1);
+}
+.p-2 {
+	padding: em(2);
+}
+.p-3 {
+	padding: em(3);
+}
+.p-4 {
+	padding: em(4);
+}
+.p-5 {
+	padding: em(5);
+}
+.p-10 {
+	padding: em(10);
+}
+.p-15 {
+	padding: em(15);
+}
+.p-20 {
+	padding: em(20);
+}
+.p-30 {
+	padding: em(30);
+}
+.p-40 {
+	padding: em(40);
+}
+.p-50 {
+	padding: em(50);
+}
+
+.p-t-1 {
+	padding-top: em(1);
+}
+.p-t-2 {
+	padding-top: em(2);
+}
+.p-t-3 {
+	padding-top: em(3);
+}
+.p-t-4 {
+	padding-top: em(4);
+}
+.p-t-5 {
+	padding-top: em(5);
+}
+.p-t-10 {
+	padding-top: em(10);
+}
+.p-t-15 {
+	padding-top: em(15);
+}
+.p-t-20 {
+	padding-top: em(20);
+}
+.p-t-30 {
+	padding-top: em(30);
+}
+.p-t-40 {
+	padding-top: em(40);
+}
+.p-t-50 {
+	padding-top: em(50);
+}
+
+
+.p-r-1 {
+	padding-right: em(1);
+}
+.p-r-2 {
+	padding-right: em(2);
+}
+.p-r-3 {
+	padding-right: em(3);
+}
+.p-r-4 {
+	padding-right: em(4);
+}
+.p-r-5 {
+	padding-right: em(5);
+}
+.p-r-10 {
+	padding-right: em(10);
+}
+.p-r-15 {
+	padding-right: em(15);
+}
+.p-r-20 {
+	padding-right: em(20);
+}
+.p-r-30 {
+	padding-right: em(30);
+}
+.p-r-40 {
+	padding-right: em(40);
+}
+.p-r-50 {
+	padding-right: em(50);
+}
+
+.p-b-1 {
+	padding-bottom: em(1);
+}
+.p-b-2 {
+	padding-bottom: em(2);
+}
+.p-b-3 {
+	padding-bottom: em(3);
+}
+.p-b-4 {
+	padding-bottom: em(4);
+}
+.p-b-5 {
+	padding-bottom: em(5);
+}
+.p-b-10 {
+	padding-bottom: em(10);
+}
+.p-b-15 {
+	padding-bottom: em(15);
+}
+.p-b-20 {
+	padding-bottom: em(20);
+}
+.p-b-30 {
+	padding-bottom: em(30);
+}
+.p-b-40 {
+	padding-bottom: em(40);
+}
+.p-b-50 {
+	padding-bottom: em(50);
+}
+
+
+.p-l-1 {
+	padding-left: em(1);
+}
+.p-l-2 {
+	padding-left: em(2);
+}
+.p-l-3 {
+	padding-left: em(3);
+}
+.p-l-4 {
+	padding-left: em(4);
+}
+.p-l-5 {
+	padding-left: em(5);
+}
+.p-l-10 {
+	padding-left: em(10);
+}
+.p-l-15 {
+	padding-left: em(15);
+}
+.p-l-20 {
+	padding-left: em(20);
+}
+.p-l-30 {
+	padding-left: em(30);
+}
+.p-l-40 {
+	padding-left: em(40);
+}
+.p-l-50 {
+	padding-left: em(50);
+}
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Margin Helpers
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.m-1 {
+	margin: em(1);
+}
+.m-2 {
+	margin: em(2);
+}
+.m-3 {
+	margin: em(3);
+}
+.m-4 {
+	margin: em(4);
+}
+.m-5 {
+	margin: em(5);
+}
+.m-10 {
+	margin: em(10);
+}
+.m-15 {
+	margin: em(15);
+}
+.m-20 {
+	margin: em(20);
+}
+.m-30 {
+	margin: em(30);
+}
+.m-40 {
+	margin: em(40);
+}
+.m-50 {
+	margin: em(50);
+}
+
+.m-t-1 {
+	margin-top: em(1);
+}
+.m-t-2 {
+	margin-top: em(2);
+}
+.m-t-3 {
+	margin-top: em(3);
+}
+.m-t-4 {
+	margin-top: em(4);
+}
+.m-t-5 {
+	margin-top: em(5);
+}
+.m-t-10 {
+	margin-top: em(10);
+}
+.m-t-15 {
+	margin-top: em(15);
+}
+.m-t-20 {
+	margin-top: em(20);
+}
+.m-t-30 {
+	margin-top: em(30);
+}
+.m-t-40 {
+	margin-top: em(40);
+}
+.m-t-50 {
+	margin-top: em(50);
+}
+
+
+.m-r-1 {
+	margin-right: em(1);
+}
+.m-r-2 {
+	margin-right: em(2);
+}
+.m-r-3 {
+	margin-right: em(3);
+}
+.m-r-4 {
+	margin-right: em(4);
+}
+.m-r-5 {
+	margin-right: em(5);
+}
+.m-r-10 {
+	margin-right: em(10);
+}
+.m-r-15 {
+	margin-right: em(15);
+}
+.m-r-20 {
+	margin-right: em(20);
+}
+.m-r-30 {
+	margin-right: em(30);
+}
+.m-r-40 {
+	margin-right: em(40);
+}
+.m-r-50 {
+	margin-right: em(50);
+}
+
+.m-b-1 {
+	margin-bottom: em(1);
+}
+.m-b-2 {
+	margin-bottom: em(2);
+}
+.m-b-3 {
+	margin-bottom: em(3);
+}
+.m-b-4 {
+	margin-bottom: em(4);
+}
+.m-b-5 {
+	margin-bottom: em(5);
+}
+.m-b-10 {
+	margin-bottom: em(10);
+}
+.m-b-15 {
+	margin-bottom: em(15);
+}
+.m-b-20 {
+	margin-bottom: em(20);
+}
+.m-b-30 {
+	margin-bottom: em(30);
+}
+.m-b-40 {
+	margin-bottom: em(40);
+}
+.m-b-50 {
+	margin-bottom: em(50);
+}
+
+
+.m-l-1 {
+	margin-left: em(1);
+}
+.m-l-2 {
+	margin-left: em(2);
+}
+.m-l-3 {
+	margin-left: em(3);
+}
+.m-l-4 {
+	margin-left: em(4);
+}
+.m-l-5 {
+	margin-left: em(5);
+}
+.m-l-10 {
+	margin-left: em(10);
+}
+.m-l-15 {
+	margin-left: em(15);
+}
+.m-l-20 {
+	margin-left: em(20);
+}
+.m-l-30 {
+	margin-left: em(30);
+}
+.m-l-40 {
+	margin-left: em(40);
+}
+.m-l-50 {
+	margin-left: em(50);
+}
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Float
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Width
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.width-1 {
+	width: 1%; 
+}
+.width-2 {
+	width: 2%; 
+}
+.width-3 {
+	width: 3%; 
+}
+.width-4 {
+	width: 4%; 
+}
+.width-5 {
+	width: 5%; 
+}
+.width-10 {
+	width: 10%; 
+}
+.width-20 {
+	width: 20%; 
+}
+.width-25 {
+	width: 25%; 
+}
+.width-30 {
+	width: 30%; 
+}
+.width-33 {
+	width: 33.33%; 
+}
+.width-35 {
+	width: 35%; 
+}
+.width-40 {
+	width: 40%; 
+}
+.width-45 {
+	width: 45%; 
+}
+.width-50 {
+	width: 50%; 
+}
+.width-55 {
+	width: 55%; 
+}
+.width-60 {
+	width: 60%; 
+}
+.width-65 {
+	width: 65%; 
+}
+.width-70 {
+	width: 70%; 
+}
+.width-75 {
+	width: 75%; 
+}
+.width-80 {
+	width: 80%; 
+}
+.width-85 {
+	width: 85%; 
+}
+.width-90 {
+	width: 90%; 
+}
+.width-95 {
+	width: 95%; 
+}
+.width-100 {
+	width: 100%; 
+}
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Border
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.b-r-25 {
+	border-radius: 25px;
+}
+/** End helpers */
