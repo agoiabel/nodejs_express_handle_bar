@@ -92,6 +92,9 @@ $browser-context: 16; // Default
 .flexColumnDirection {
 	flex-direction: column;
 }
+.flexSpaceBetween {
+	justify-content: space-between !important;
+}
 
 
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -326,7 +329,7 @@ $browser-context: 16; // Default
 	margin-top: em(10);
 }
 .m-t-15 {
-	margin-top: em(15);
+	margin-top: 15px !important;
 }
 .m-t-20 {
 	margin-top: em(20);
@@ -531,10 +534,26 @@ $browser-context: 16; // Default
 .width-100 {
 	width: 100%; 
 }
+
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
 *   Border
 *–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .b-r-25 {
 	border-radius: 25px;
 }
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Form
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.login-form .form-control {
+	border: 1px solid #CDCFD2;
+	padding: 5px 5px 5px 60px;
+	height: 50px;
+}
+.login-form .form-control:hover,
+.login-form .form-control:focus {
+	border: 1px solid #CDCFD2 !important;
+	border-radius: 25px !important;
+}
+
 /** End helpers */

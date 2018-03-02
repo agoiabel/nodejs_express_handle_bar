@@ -119,6 +119,9 @@ table {
 .flexColumnDirection {
   flex-direction: column; }
 
+.flexSpaceBetween {
+  justify-content: space-between !important; }
+
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
 *   Padding Helpers
 *–––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -342,7 +345,7 @@ table {
   margin-top: 0.625em; }
 
 .m-t-15 {
-  margin-top: 0.9375em; }
+  margin-top: 15px !important; }
 
 .m-t-20 {
   margin-top: 1.25em; }
@@ -545,6 +548,19 @@ table {
 .b-r-25 {
   border-radius: 25px; }
 
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Form
+*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.login-form .form-control {
+  border: 1px solid #CDCFD2;
+  padding: 5px 5px 5px 60px;
+  height: 50px; }
+
+.login-form .form-control:hover,
+.login-form .form-control:focus {
+  border: 1px solid #CDCFD2 !important;
+  border-radius: 25px !important; }
+
 /** End helpers */
 /** This will contain the site,s color variable and default styles */
 .wrapper {
@@ -561,7 +577,8 @@ html {
 
 .item-description {
   padding: 200px 10px 10px 25px;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 50% !important; }
 
 .item-title {
   font-size: 1.5625em;
@@ -619,7 +636,8 @@ img {
   max-height: 100%; }
 
 .item-images {
-  position: relative; }
+  position: relative;
+  max-width: 50%; }
 
 .item-image {
   display: none; }
@@ -745,6 +763,11 @@ img {
     position: absolute;
     top: 80%;
     left: 75%; } }
+@media screen and (max-width: 950px) {
+  .item-description,
+  .item-images {
+    width: 100% !important;
+    max-width: 100% !important; } }
 .modal {
   display: none;
   position: fixed;
@@ -871,16 +894,6 @@ img {
 .login-body {
   padding: 25px 15px 40px 15px; }
 
-.login-form .form-control {
-  border: 1px solid #CDCFD2;
-  padding: 5px 5px 5px 60px;
-  height: 50px; }
-
-.login-form .form-control:hover,
-.login-form .form-control:focus {
-  border: 1px solid #CDCFD2 !important;
-  border-radius: 25px !important; }
-
 .icon-input {
   position: relative;
   margin: 0 20px;
@@ -956,5 +969,88 @@ button.btn.btn-shadow {
 
   button.btn.btn-shadow {
     margin-left: 0; } }
+.dashboard-wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.dashboard-header {
+  background-color: #fff;
+  padding: 15px 0; }
+
+.dashboard-logo {
+  margin-right: auto; }
+
+ul.dashboard-nav li {
+  margin-left: 15px;
+  padding-top: 15px;
+  color: #ADAFB2; }
+
+ul.dashboard-nav li.active {
+  color: #2EBFD9; }
+
+ul.dashboard-nav li:hover {
+  color: #2EBFD9; }
+
+.dashboard-logo img {
+  max-width: 70%; }
+
+.dashboard-content {
+  padding: 25px;
+  background-color: #fff;
+  max-width: 100%;
+  min-width: 100%; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+th,
+td {
+  border: 1px solid #cecfd5;
+  padding: 10px 15px; }
+
+thead {
+  background: #395870;
+  color: #fff; }
+
+tbody tr:nth-child(even) {
+  background: #f0f0f2; }
+
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5; }
+
+td:first-child {
+  border-left: 1px solid #cecfd5; }
+
+.add-new a {
+  text-decoration: none; }
+
+.payment-header {
+  background-color: #222A34;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px; }
+
+.payment-details {
+  width: 50% !important;
+  background-color: #fff; }
+
+.payment-guide {
+  margin: 0 0 20px 20px; }
+
+@media screen and (max-width: 950px) {
+  .payment-details {
+    width: 100% !important; } }
+/** I need to confirm why this is not working  */
+.form-control {
+  border: 1px solid #CDCFD2;
+  padding: 5px 5px 5px 60px;
+  height: 50px; }
+
+.form-control:hover,
+.form-control:focus {
+  border: 1px solid #CDCFD2 !important;
+  border-radius: 25px !important; }
 
 /*# sourceMappingURL=style.css.map */

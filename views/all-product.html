@@ -1,0 +1,44 @@
+<div class="dashboard-header">
+	<div class="dashboard-wrapper flexContainer">
+		<div class="dashboard-logo">
+			<img src="./images/beauty-lounge.png" alt="">
+		</div>
+		<ul class="dashboard-nav flexContainer">
+			<li class="dashboard-nav-item-1 active">HOME</li>
+			<li class="dashboard-nav-item-2">ABOUT</li>
+			<li class="dashboard-nav-item-3">CONTACT</li>
+		</ul>
+	</div>
+</div>
+
+<div class="dashboard-wrapper m-t-15">
+	<div class="dashboard-content">
+		<div class="add-new width-15 flexContainer flexEnd">
+			<a class="btn" href="/add-new-product">Add new item</a>
+		</div>
+	
+		<table class="table m-t-15">
+			<thead>
+				<tr>
+					<th>Product Name</th>
+					<th>Product Description</th>
+					<th>Price</th>
+					<th>External link</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each products}}
+					<tr>
+						<td>{{title}}</td>
+						<td>{{product_description}}</td>
+						<td>{{price}}</td>
+						<td>{{external_link}}</td>
+						<td><i class="fa fa-trash"></i> <i class="fa fa-edit"></i><i class="fa fa-edit"></i></td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+
+	</div>
+</div>

@@ -14,10 +14,10 @@
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
     "express-session": "^1.15.6",
     "faker": "^4.1.0",
     "hbs": "*",
-    "migrate": "^0.2.4",
     "mongoose": "^4.12.4"
   }
 }

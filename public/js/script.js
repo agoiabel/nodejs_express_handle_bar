@@ -24,7 +24,11 @@
 		}
 
 
-		/** calculation */
+		/**
+		 * Handle addition of item
+		 * 
+		 * @return 
+		 */
 		function substraction () {
 			var value = parseInt(document.getElementById("value").innerHTML);
 			if (value == 1) {
@@ -35,27 +39,36 @@
 			console.dir(value);
 		}
 
+		/**
+		 * Handle subtraction of item
+		 * 
+		 * @return 
+		 */
 		function addition () {
 			var value = parseInt(document.getElementById("value").innerHTML);
 			var new_value = value + 1;
 			document.getElementById("value").innerHTML = new_value;
-			console.dir(value);
 		}
 
+
+		/**
+		 * Handle the process of showing and hiding mobile
+		 * 
+		 * @return 
+		 */
 		function displayModal() {
-			var modal = document.getElementById('myModal');
-		    modal.style.display = "block";
+			var item_description = document.getElementById('item-description');
+			var payment_details = document.getElementById('payment-details');
+
+			item_description.setAttribute("hidden", true);
+			payment_details.removeAttribute("hidden");
 		}
 
-		function closeModal () {
-			var modal = document.getElementById('myModal');
-		    modal.style.display = "none";
+		function closeModal() {
+			var item_description = document.getElementById('item-description');
+			var payment_details = document.getElementById('payment-details');
+
+			payment_details.setAttribute("hidden", true);
+			item_description.removeAttribute("hidden");			
 		}
 
-		// When the user clicks anywhere outside of the modal, close it
-		function closeModal(event) {
-			var modal = document.getElementById('myModal');			
-		    if (event.target == modal) {
-		        modal.style.display = "none";
-		    }
-		}

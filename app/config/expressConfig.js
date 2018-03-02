@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
+
 
 /**
  * This is the file were all express configuarations are declared
@@ -27,6 +29,7 @@ module.exports = function (app) {
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: true }));
 
+
 	/**
 	 * Use to set the static / asset folder
 	 */
@@ -37,4 +40,7 @@ module.exports = function (app) {
 	 */
 	app.set('view engine', 'html');
 	app.engine('html', hbs.__express);
+
+	
+	app.use(fileUpload());
 }

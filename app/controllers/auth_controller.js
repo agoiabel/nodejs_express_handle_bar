@@ -8,12 +8,13 @@ let session = require('express-session');
  * @type 
  */
 var AuthController = {
+
 	/**
 	 * Handle the process of authenticating a user
 	 * 
 	 * @return        
 	 */
-	store: function (req, res) {
+	store: async (req, res) => {
 
 		if (! (req.body.email && req.body.password) ) {
 			var err = new Error('Email and password are required');
@@ -21,27 +22,25 @@ var AuthController = {
 			return next(err);
 		}
 
-		User.findOne({ email: req.body.email })
-			.exec(function (error, user) {
-				if (error) {
-					res.send('Email does not exists');
+		try	{
+			const user = await User.findOne({ email: req.body.email })
+
+			bcrypt.compare(req.body.password, user.password, function (error, result) {
+				if (! result === true) {
+					res.send('wrong password');						
+				} else {
+					//store in a session
+					req.session.userId = user._id;
+					res.redirect('/dashboard');		
 				}
-
-				bcrypt.compare(req.body.password, user.password, function (error, result) {
-					if (! result === true) {
-						res.send('wrong password');						
-					} else {
-						//store in a session
-						req.session.userId = user._id;
-						res.redirect('/dashboard');		
-					}
-				});
-
-
 			});
-		//query the user,s table with the inputted email
-			//if doesn't exists,  
-		//check if
+
+		} catch (err) {
+			var err = new Error('Email does not exists');
+			err.status = 401;
+			return next(err);
+		}
+
 	},
 
 	/**
@@ -51,17 +50,17 @@ var AuthController = {
 	 * @param res 
 	 * @return      
 	 */
-	logout: function (req, res) {
+	logout: async function (req, res) {
 		if (req.session.userId) {
-			req.session.userId.destroy(function (error) {
-				if (error) { 
-					return next(error);
-				} else {
-					return res.redirect('/');
-				}
-			});
+			try {
+				let session = await req.session.userId.destroy();
+				return res.redirect('/');
+			} catch (err) {
+				return next(error);				
+			}
 		}
 	}
+
 };
 
 module.exports = AuthController;

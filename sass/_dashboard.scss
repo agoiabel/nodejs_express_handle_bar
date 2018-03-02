@@ -1,0 +1,61 @@
+.dashboard-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+.dashboard-header {
+	background-color: $white;
+	padding: 15px 0;
+}
+.dashboard-logo {
+	margin-right: auto;
+}
+ul.dashboard-nav li {
+	margin-left: 15px;
+	padding-top: 15px;
+	color: $backend-grey;
+} 
+ul.dashboard-nav li.active {
+	color: $backend-active;
+}
+ul.dashboard-nav li:hover {
+	color: $backend-active;
+}
+.dashboard-logo img {
+	max-width: 70%;
+}
+
+
+.dashboard-content {
+	padding: 25px;
+	background-color: $white;	
+
+	max-width: 100%;
+	min-width: 100%;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th,
+td {
+	border: 1px solid #cecfd5;
+	padding: 10px 15px;
+}
+thead {
+  background: #395870;
+  color: #fff;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+
+.add-new a {
+	text-decoration: none;
+}

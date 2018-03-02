@@ -1,0 +1,63 @@
+<div class="dashboard-header">
+	<div class="dashboard-wrapper flexContainer">
+		<div class="dashboard-logo">
+			<img src="./images/beauty-lounge.png" alt="">
+		</div>
+		<ul class="dashboard-nav flexContainer">
+			<li class="dashboard-nav-item-1 active">HOME</li>
+			<li class="dashboard-nav-item-2">ABOUT</li>
+			<li class="dashboard-nav-item-3">CONTACT</li>
+		</ul>
+	</div>
+</div>
+
+<div class="dashboard-wrapper m-t-15">
+	<div class="dashboard-content">
+		<div class="add-new width-15 flexContainer flexEnd">
+			<a class="btn" href="/dashboard">All products</a>
+		</div>
+	
+		<form action="/store-new-product" method="POST" name="add-new-product" class="add-new-product m-t-15" enctype="multipart/form-data">
+			
+			<div class="form-group">
+				<div class="icon-input">
+					<i class="fa fa-envelope-open" aria-hidden="true"></i>						
+					<input type="text" name="title" placeholder="Title" class="form-control b-r-25" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="icon-input">
+					<i class="fa fa-lock" aria-hidden="true"></i>
+					<textarea name="product_description" 
+							  id="product-description" 
+							  class="form-control b-r-25" 
+							  cols="30" 
+							  rows="10"
+					></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="icon-input">
+					<i class="fa fa-money" aria-hidden="true"></i>						
+					<input type="number" name="price" placeholder="Price" class="form-control b-r-25" required="required">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="icon-input">
+					<i class="fa fa-envelope-open" aria-hidden="true"></i>						
+					<input type="url" name="external_link" placeholder="Link" class="form-control b-r-25" required="required">
+				</div>
+			</div>
+
+<!-- 			<div class="form-group">
+				<div class="icon-input">
+					<input type="file" name="image" class="form-control b-r-25" required="required">
+				</div>
+			</div> -->
+
+			<button class="btn btn-login">CREATE</button>
+
+		</form>
+
+	</div>
+</div>

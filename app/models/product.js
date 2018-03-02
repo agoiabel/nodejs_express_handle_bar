@@ -1,38 +1,41 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-let productSchema = mongoose.Schema({
+
+let Schema = mongoose.Schema;
+
+let productSchema = Schema({
 	product_category_id: {
-		type: Integer,
-		required: true
+		type: Number
+		// required: true
 	},
-	name: {
+	slug: {
+		type: String,
+		// required: true
+	},
+	title: {
 		type: String,
 		required: true
 	},
 	price: {
+		type: Number,
+		required: true
+	},
+	product_description: {
 		type: String,
 		required: true
 	},
-	crop_image_path: {
+	external_link: {
 		type: String,
 		required: true
 	},
-	uncropped_image_path: {
-		type: String,
-		required: true
-	},
-	description: {
-		type: String,
-		required: true
-	},
-	logs: {
-		type: Object,
-		required: false
-	},
-	reviews: {
-		type: Object,
-		required: false
-	}
+	logs: [{
+			type: Schema.Types.ObjectId,
+			ref: "Log"
+	}],
+	images: [{
+			type: Schema.Types.ObjectId,
+			ref: "ProductImage"
+	}]
 });
 
 let Product = module.exports = mongoose.model('Product', productSchema);

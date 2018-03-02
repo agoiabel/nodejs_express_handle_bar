@@ -1,0 +1,35 @@
+<div class="dashboard-header">
+	<div class="dashboard-wrapper flexContainer">
+		<div class="dashboard-logo">
+			<img src="../images/beauty-lounge.png" alt="">
+		</div>
+		<ul class="dashboard-nav flexContainer">
+			<li class="dashboard-nav-item-1 active">HOME</li>
+			<li class="dashboard-nav-item-2">ABOUT</li>
+			<li class="dashboard-nav-item-3">CONTACT</li>
+		</ul>
+	</div>
+</div>
+{{product_slug}}
+<div class="dashboard-wrapper m-t-15">
+	<div class="dashboard-content">
+		<div class="add-new width-15 flexContainer flexEnd">
+			<a class="btn" href="/dashboard">All products</a>
+		</div>
+		<form action="/store-product-image" class="dropzone m-t-15" enctype="multipart/form-data" method="POST">
+		  <input type="hidden" name="product_slug" value="{{product_slug}}">
+
+		  <div class="fallback">
+		    <input name="file" type="file" multiple />
+		  </div>
+		</form>
+
+		<button class="btn btn-login m-t-20">CREATE</button>
+
+
+	</div>
+</div>
+
+<script>
+	
+</script>

@@ -1,6 +1,8 @@
 .item-description {
 	padding: 			200px 10px 10px 25px;
 	background-color:	$white;
+
+	width: 50% !important;
 }
 .item-title {
 	font-size: em(25);	
@@ -64,6 +66,7 @@ img {
 
 .item-images {
 	position: relative;
+	max-width: 50%;
 }
 .item-image {
 	display: none;
@@ -202,5 +205,13 @@ img {
 	  position: absolute;
 	  top: 80%;
 	  left: 75%;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.item-description,
+	.item-images {
+		width: 100% !important;
+		max-width: 100% !important;
 	}
 }
